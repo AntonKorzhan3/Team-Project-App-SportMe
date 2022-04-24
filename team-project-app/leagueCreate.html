@@ -1,0 +1,106 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>SportMe</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img class="banner-image" src="images/mainBanner.jpeg" alt="banner"/>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.yelp.ie/"><i class="fab fa-yelp"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>					
+                </ul>
+            </div>    
+
+            <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="userProfile.html">Account</a>
+                    <a href="similarPeople.html">Similar People</a>
+                    <a href="chooseSport.html">Sport Choice</a>
+                    <a href="teamReg.html">Team Create</a>
+                    <a href="teamHome.html">Team Home</a>
+                    <a href="leagueDisplay.html">League Display</a>
+                    <a href="clubCreate.html">Club Create</a>
+                    <a href="clubHome.html">Club Home</a>
+                    <a href="clubPostings.html">Club Postings</a>
+                    <a href="weatherPage.html">Weather Forecast</a>
+                </div>
+                
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+               </div>
+        </header>
+
+        <form action="leagueDisplay.html">
+            <div class="container">
+                <label for="lName"><b>Enter the league Title</b></label>
+                <input type="text" id="lTitle" placeholder="Enter League Title" name="lName" required>
+                <label for="teamAmount"><b>Enter amount of Teams</b></label>
+                <input type="text" id="lAMT" placeholder="Enter amount of teams" name="teamAmount" required>
+                <label for="teamNames"><b>Enter all Team Names</b></label>
+                <input type="text" id="lNames" placeholder="Enter all team names" name="teamNames" required>
+                <label for="sLength"><b>Enter length of Season</b></label>
+                <input type="text" id="lSeason" placeholder="Enter length of Season" name="sLength" required>
+                <button type="submit">Create League</button>
+            </div>
+    
+        </form>
+
+        <script>
+                    const handleTitleChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("leagueTitle", e.target.value)
+                    }
+
+                    const handleAmountChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("teamAmount", e.target.value)
+                    }
+
+                    const handleNamesChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("teamNames", e.target.value)
+                    }
+
+                    const handleLengthChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("seasonLength", e.target.value)
+                    }
+
+                    const leagueTitleElement = document.getElementById("lTitle")
+                    leagueTitleElement.addEventListener("change", handleTitleChange)
+
+                    const teamAmountElement = document.getElementById("lAMT")
+                    teamAmountElement.addEventListener("change", handleAmountChange)
+
+                    const teamNamesElement = document.getElementById("lNames")
+                    teamNamesElement.addEventListener("change", handleNamesChange)
+
+                    const seasonLengthElement = document.getElementById("lSeason")
+                    seasonLengthElement.addEventListener("change", handleLengthChange)
+
+                    function openNav() {
+                        document.getElementById("mySidebar").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "250px";
+                        document.getElementById("main").style.display = "none";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidebar").style.width = "0";
+                        document.getElementById("main").style.marginLeft= "0";
+                        document.getElementById("main").style.display = "block";
+                    }    
+            
+        </script>
+        
+    </body>
+
+
+</html>

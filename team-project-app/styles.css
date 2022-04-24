@@ -1,0 +1,324 @@
+body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(235,235,235,1) 0%, rgba(0,212,255,1) 53%, rgba(0,26,255,1) 95%);
+    font-family: Verdana, sans-serif;
+    margin:0;
+}
+header{
+  background: white;
+  height: -90%;
+}
+.banner-image{
+   height: auto;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 20%;
+}
+.navbar{
+    background-color: #130F3B !Important;
+     color: rgb(15, 15, 15);
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.logInsignUp{
+   width:50%;
+   border-radius: 12px;
+   height: auto;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: #464343;
+   transition: all 0.5s;
+   cursor: pointer;
+}
+
+.logInsignUp span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.logInsignUp span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.logInsignUp:hover span {
+  padding-right: 25px;
+}
+
+.logInsignUp:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.lbl1 {
+  display: inline; /* the default for span */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.accP{
+  width: 200px;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #ffffff;
+}
+
+.accUL{
+  list-style: none;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.socials{
+	list-style: none;
+	display: flex;
+	align-items: right;
+	justify-content: right;
+	margin: 5px;
+}
+
+/*the margin in between the icons in the list*/
+.socials li{
+	margin: 0 10px;
+}
+
+/* colour of icons*/
+.socials a{
+	color: rgb(12, 7, 7);
+}
+
+/*changes the size of icons and the transition of the hover*/
+.socials a i{
+	font-size: 30px;
+	transition: color .4s ease;
+}
+
+/* changes the hover over the social media icons*/
+.socials a:hover i{
+	color: rgb(15, 198, 204);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.weatherButton{
+  position:relative;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+  border-radius: 12px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: rgb(255, 254, 254);
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border: none;
+  width: 20%;
+  margin-top: -225px;
+  float: right;
+  
+}
+
+.openbtn:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#main {
+  transition: margin-left .5s;
+  
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 400px) {
+  header{
+    background: white;
+    height: -90%;
+  }
+  .banner-image{
+     width: 50%;
+     height: auto;
+     padding-left: -70%;
+  }
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+  .logInsignUp{
+    width:60%;
+    font-size: 30px;
+    border-radius: 12px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #464343;
+    transition: all 0.5s;
+    cursor: pointer;
+ }
+
+ 
+ .tablew, td:not(.ignore-css){
+  border: 5px solid black;
+  display:flex;
+}
+ 
+.choiceSport{
+    text-align: center;
+}
+
+.sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+
+}
+
+.postings, .teamHomeP{
+  color:rgb(0, 0, 0);
+  text-align: center;
+}
+
+
+

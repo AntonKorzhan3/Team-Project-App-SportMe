@@ -1,0 +1,88 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>SportMe</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img class="banner-image" src="images/mainBanner.jpeg" alt="banner"/>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.yelp.ie/"><i class="fab fa-yelp"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>					
+                </ul>
+            </div>    
+
+            <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="userProfile.html">Account</a>
+                    <a href="similarPeople.html">Similar People</a>
+                    <a href="chooseSport.html">Sport Choice</a>
+                    <a href="teamReg.html">Team Create</a>
+                    <a href="teamHome.html">Team Home</a>
+                    <a href="leagueCreate.html">League Create</a>
+                    <a href="clubCreate.html">Club Create</a>
+                    <a href="clubHome.html">Club Home</a>
+                    <a href="clubPostings.html">Club Postings</a>
+                    <a href="weatherPage.html">Weather Forecast</a>
+                </div>
+                
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+               </div>
+        </header>
+
+        <div class="container" id="container2">
+            <ul class="accUL">
+                <li><label for="uname" class="lbl1"><b>League Title:</b></label>
+                <p id="display-leagueTitle" class="accP"></p></li>
+                <li><label for="psw" class="lbl1"><b>Amount of Teams:</b></label>
+                <p id="display-teamAmount" class="accP"></p></li>
+                <li><label for="uname" class="lbl1"><b>Team Names:</b></label>
+                <p id="display-teamNames" class="accP"></p></li>
+                <li><label for="uname" class="lbl1"><b>Season Length:</b></label>
+                <p id="display-seasonLength" class="accP"></p></li>
+            </ul>
+        </div>
+
+        <script>
+            const title = localStorage.getItem("leagueTitle");
+            const tE = document.getElementById("display-leagueTitle")
+            tE.innerHTML = title
+
+            const tAmount = localStorage.getItem("teamAmount");
+            const aE = document.getElementById("display-teamAmount")
+            aE.innerHTML = tAmount
+
+            const tName = localStorage.getItem("teamNames");
+            const nE = document.getElementById("display-teamNames")
+            nE.innerHTML = tName
+
+            const slength = localStorage.getItem("seasonLength");
+            const sE = document.getElementById("display-seasonLength")
+            sE.innerHTML = slength
+
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("main").style.display = "none";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+                document.getElementById("main").style.display = "block";
+            }    
+            
+        </script>
+        
+    </body>
+
+
+</html>

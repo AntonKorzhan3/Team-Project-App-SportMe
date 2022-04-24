@@ -1,0 +1,117 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>SportMe</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img class="banner-image" src="images/mainBanner.jpeg" alt="banner"/>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.yelp.ie/"><i class="fab fa-yelp"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>					
+                </ul>
+            </div>    
+
+            <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="userProfile.html">Account</a>
+                    <a href="similarPeople.html">Similar People</a>
+                    <a href="chooseSport.html">Sport Choice</a>
+                    <a href="teamReg.html">Team Create</a>
+                    <a href="teamHome.html">Team Home</a>
+                    <a href="leagueCreate.html">League Create</a>
+                    <a href="leagueDisplay.html">League Display</a>
+                    <a href="clubHome.html">Club Home</a>
+                    <a href="clubPostings.html">Club Postings</a>
+                    <a href="weatherPage.html">Weather Forecast</a>
+                </div>
+                
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+               </div>
+        </header>
+
+        <form action="teamHome.html">
+            <div class="container">
+                <label for="cName"><b>Enter the Club Name</b></label>
+                <input type="text" id="cTitle" placeholder="Enter Club Name" name="cName" required>
+                <label for="clubAmount"><b>Enter amount of Players</b></label>
+                <input type="text" id="cAMT" placeholder="Enter amount of players" name="clubAmount" required>
+                <label for="clubNames"><b>Enter all Players Names</b></label>
+                <input type="text" id="cNames" placeholder="Enter all player names" name="clubNames" required>
+                <label for="clubArea"><b>Enter the Clubs local Area</b></label>
+                <input type="text" id="cArea" placeholder="Enter club area" name="cArea" required>
+                <label for="clubRegistration"><b>Enter the Clubs Registration Number</b></label>
+                <input type="text" id="cReg" placeholder="Enter club registration number" name="cReg" required>
+                <button type="submit">Register Club</button>
+            </div>
+    
+            
+        </form>
+
+        <script>
+                    const handleCnameChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("clubname", e.target.value)
+                    }
+
+                    const handlePlayersChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("clubplayers", e.target.value)
+                    }
+
+                    const handlePnamesChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("clubnames", e.target.value)
+                    }
+
+                    const handleAreaChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("clubarea", e.target.value)
+                    }
+
+                    const handleRegChange = e => {
+                        e.preventDefault()
+                        localStorage.setItem("clubreg", e.target.value)
+                    }
+
+                    const clubTitleElement = document.getElementById("cTitle")
+                    clubTitleElement.addEventListener("change", handleCnameChange)
+
+                    const playerAmountElement = document.getElementById("cAMT")
+                    playerAmountElement.addEventListener("change", handlePlayersChange)
+
+                    const playerNamesElement = document.getElementById("cNames")
+                    playerNamesElement.addEventListener("change", handlePnamesChange)
+
+                    const clubAreaElement = document.getElementById("cArea")
+                    clubAreaElement.addEventListener("change", handleAreaChange)
+
+                    const clubRegistrationElement = document.getElementById("cReg")
+                    clubRegistrationElement.addEventListener("change", handleRegChange)
+
+                    function openNav() {
+                        document.getElementById("mySidebar").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "250px";
+                        document.getElementById("main").style.display = "none";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidebar").style.width = "0";
+                        document.getElementById("main").style.marginLeft= "0";
+                        document.getElementById("main").style.display = "block";
+                    }    
+            
+        </script>
+        
+    </body>
+
+
+</html>

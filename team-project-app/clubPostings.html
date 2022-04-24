@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>Club Postings</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img class="banner-image" src="images/mainBanner.jpeg" alt="banner"/>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.yelp.ie/"><i class="fab fa-yelp"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>					
+                </ul>
+            </div>    
+
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="userProfile.html">Account</a>
+                <a href="similarPeople.html">Similar People</a>
+                <a href="chooseSport.html">Sport Choice</a>
+                <a href="teamReg.html">Team Create</a>
+                <a href="leagueCreate.html">League Create</a>
+                <a href="leagueDisplay.html">League Display</a>
+                <a href="clubCreate.html">Club Create</a>
+                <a href="clubHome.html">Club Home</a>
+                <a href="weatherPage.html">Weather Forecast</a>
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="openNav()">☰</button>
+              </div>
+        </header>
+        <center><h1> Club Postings</h1></center>
+        <table style="width:100%" class="tablePostings">
+            <tr>
+              <th>MON</th>
+              <th>WED</th>
+              <th>FRI</th>
+              <th>SAT</th>
+            </tr>
+            <tr>
+              <td class="ignore-css">17:00 </td>
+              <td class="ignore-css">15:30 </td>
+              <td class="ignore-css"> 16:30</td>
+              <td class="ignore-css"> 14:00</td>
+            </tr>
+          </table>
+        <a href="teamHome.html">
+            <button class="kianBtn">Return to club's homepage</button>
+        </a>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("main").style.display = "none";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+                document.getElementById("main").style.display = "block";
+            }    
+        </script>
+    </body>
+</html>

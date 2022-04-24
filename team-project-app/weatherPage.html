@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>SportMe</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/xmltojson@1.3.5/lib/xmlToJSON.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">  
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img class="banner-image" src="images/mainBanner.jpeg" alt="banner"/>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.yelp.ie/"><i class="fab fa-yelp"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>					
+                </ul>
+            </div>    
+
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="userProfile.html">User Profile</a>
+                <a href="similarPeople.html">Similar People</a>
+                <a href="chooseSport.html">Sport Choice</a>
+                <a href="teamReg.html">Team Create</a>
+                <a href="teamHome.html">Team Home</a>
+                <a href="leagueCreate.html">League Create</a>
+                <a href="leagueDisplay.html">League Display</a>
+                <a href="clubCreate.html">Club Create</a>
+                <a href="clubHome.html">Club Home</a>
+                <a href="clubPostings.html">Club Postings</a>
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="openNav()">☰</button>
+              </div>
+        </header>
+
+        <input type="text" id="city_id" placeholder="Enter City Here">
+        <button type="button" class="weatherButton" onclick="loadData()">Load Weather Info</button>
+        <div id="demo">
+
+    </div>
+    
+    <script src="weather.js">
+      
+    </script>
+
+        
+    </body>
+
+
+</html>
